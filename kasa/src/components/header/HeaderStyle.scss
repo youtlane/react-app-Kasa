@@ -6,4 +6,17 @@
     &_logo .logo{
         height: 68px;
     }
+    &_nav{
+        font-size: 24px;
+        font-weight: 500;
+
+        &_link-home {
+            padding-right: 57px;
+        }
+        &_link-home , &_link-about {
+            text-decoration: none;
+        }
+
+    }
+
 }
