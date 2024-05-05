@@ -10,11 +10,15 @@
         font-size: 24px;
         font-weight: 500;
 
-        &_link-home {
+        &_link-home , &_link-home-active {
             padding-right: 57px;
         }
         &_link-home , &_link-about {
             text-decoration: none;
+        }
+        &_link-home-active , &_link-about-active {
+            line-height: 142.6%; /* 34.224px */
+            text-decoration-line: underline;
         }
 
     }
