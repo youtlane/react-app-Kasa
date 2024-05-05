@@ -1,0 +1,9 @@
+.header{
+    margin: 45px 100px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_logo .logo{
+        height: 68px;
+    }
+}
