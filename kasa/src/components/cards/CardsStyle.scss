@@ -1,0 +1,28 @@
+.card{
+    width: 340px;
+    height: 340px;
+    border: 2px solid red;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+.card h2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    font-size: 18px;
+    color: #FFF;
+    line-height: 142.6%;
+    margin: 20px;
+    
+}
+
+.card img{
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
