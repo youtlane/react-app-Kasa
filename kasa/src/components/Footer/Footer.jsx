@@ -1,9 +1,11 @@
 import React from 'react'
-import logob from '../../assets/logo-black.jpg';
+import logo from '../../assets/logo-white.png';
+import "./FooterStyle.scss";
 export default function Footer() {
     return (
         <footer className="footer">
-            <img className="logo" src={logob} alt="Logo" />
+            <img className="footer_logo-white" src={logo} alt="Logo" />
+            <h3 className="footer_title">© 2020 Kasa. All rights reserved</h3>
         </footer>
     );
 }
