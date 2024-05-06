@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Card from '../../components/cards/Cards';
 
 
+
 import homeBackgroundImage from '../../assets/homeBackground.jpg';
 
 export default function Home() {
@@ -21,7 +22,6 @@ export default function Home() {
         <main>
             <Banner type="home" title="Chez vous, partout et ailleurs" backgroundImage={homeBackgroundImage} />
             {/* Autres contenus de la page d'accueil */}
-
             <article className="cards-container">
               <div className="cards">
                   {properties.map(property => (
@@ -29,6 +29,7 @@ export default function Home() {
                   ))}
               </div>
             </article>
+              
         </main>
     );
 }
