@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = 'http://localhost:9000'; // URL de base de votre serveur JSON
 
+
 // Fonction pour récupérer toutes les propriétés
 export const getAllProperties = async () => {
     try {

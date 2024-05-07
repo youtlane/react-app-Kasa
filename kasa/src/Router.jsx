@@ -11,7 +11,7 @@ export default function Router() {
       
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/property" element={<Property />} />
+            <Route path="/property/:id" element={<Property />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Error />} />
           </Routes>

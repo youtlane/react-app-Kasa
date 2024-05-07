@@ -1,7 +1,5 @@
 
 .cards-container {
-    /*margin: 50px 100px;*/
-    border: 2px solid blue;
     margin: 50px 100px;
     border-radius: 25px;
     background: #F6F6F6;
@@ -9,22 +7,19 @@
     
 }
 .cards{
-    
     display: grid; 
     grid-template-columns: repeat(3, 1fr);  
     gap: 50px;
-    
-    border: 2px solid green;
     margin: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .card{
-    width: 340px;
-    height: 340px;
-    border: 2px solid red;
+    width: 371px;
+    height: 371px;
     position: relative;
     border-radius: 10px;  
-    /*margin-bottom: 50px;*/
 }
 
 .card h2{
@@ -36,12 +31,11 @@
     color: #FFF;
     line-height: 142.6%;
     margin: 20px;
-    
 }
 
 .card img{
-    width: 340px;
-    height: 340px;
+    width: 371px;
+    height: 371px;
     object-fit: cover;
     border-radius: 10px;
 }
