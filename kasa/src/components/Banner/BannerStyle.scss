@@ -11,7 +11,11 @@
     color: #fff;
     font-size: 25px;
     text-shadow: $shadow;
-    box-shadow: $shadow
-    ;
+    box-shadow: $shadow;
+    @include mobile{
+        font-size: 18px;
+        margin: $marginM;
+        padding:0 16px;
+    }
     
 }

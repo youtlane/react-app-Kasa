@@ -3,6 +3,10 @@
     margin: 50px 100px;
     border-radius: 25px;
     background: #F6F6F6;
+    @include mobile{
+        background: #FFF;
+        margin: $marginM;
+    }
 }
 .cards{
     display: grid; 
@@ -11,6 +15,12 @@
     margin: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+    @include mobile{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .card{
@@ -20,6 +30,9 @@
     border-radius: 10px;
     @include card-animate;
     border-radius: 10px;
+    @include mobile{
+        @include mobileCard;
+    }
 }
     
 .card::before {
@@ -52,4 +65,7 @@
     height: 371px;
     object-fit: cover;
     border-radius: 10px;
+    @include mobile{
+        @include mobileCard;
+    }
 }

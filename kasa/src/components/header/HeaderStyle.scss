@@ -3,8 +3,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mobile{
+        margin: $marginM;
+    }
     &_logo .logo{
         height: 68px;
+        @include mobile{
+        height: 46px;
+        }
     }
     &_nav{
         font-size: 24px;
@@ -12,6 +18,10 @@
 
         &_link-home , &_link-home-active {
             padding-left: 57px;
+            @include mobile{
+                /* padding-left: 27px;*/
+            }
+            
         }
         &_link-home , &_link-about {
             text-decoration: none;
@@ -20,7 +30,11 @@
             line-height: 142.6%; /* 34.224px */
             text-decoration-line: underline;
         }
-
+        @include mobile{
+            font-size: 12px;
+        
+        }
     }
+    
 
 }

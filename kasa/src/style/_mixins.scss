@@ -15,3 +15,9 @@
         box-shadow: $shadow;
     }
 }
+
+
+@mixin mobileCard{
+    width: 335px;
+    height: 255px;
+}

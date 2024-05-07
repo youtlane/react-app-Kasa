@@ -12,4 +12,8 @@
     &_title{
         color: white;
     }
+    @include mobile{
+        font-size: 12px;
+        word-wrap: break-word;
+    }
 }
