@@ -12,9 +12,6 @@
 
     &:hover {
         opacity: 0.8;
-        /* Color functions like lighten not available on gradient */
-        box-shadow: $shadow
-        /* Make button shadow darker on hover */
-
+        box-shadow: $shadow;
     }
 }

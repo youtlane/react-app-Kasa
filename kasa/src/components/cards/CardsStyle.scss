@@ -19,6 +19,7 @@
     position: relative;
     border-radius: 10px;
     @include card-animate;
+    border-radius: 10px;
 }
     
 .card::before {
@@ -30,6 +31,7 @@
     height: 100%; 
     background-image: $linear-cards; 
     z-index: 1; 
+    border-radius: 10px;
 }
 
 .card h2{
