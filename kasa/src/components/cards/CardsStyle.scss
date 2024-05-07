@@ -18,6 +18,7 @@
     height: 371px;
     position: relative;
     border-radius: 10px;
+    @include card-animate;
 }
     
 .card::before {
