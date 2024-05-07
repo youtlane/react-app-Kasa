@@ -8,7 +8,6 @@ import About from './pages/about/About';
 
 export default function Router() {
     return (
-      
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/property/:id" element={<Property />} />
