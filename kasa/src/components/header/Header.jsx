@@ -1,9 +1,7 @@
-// Header.js
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.jpg';
-import './HeaderStyle.scss';
 
 export default function Header() {
     const[currentRoute, setCurrentRoute] = useState()
