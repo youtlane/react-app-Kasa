@@ -1,8 +1,4 @@
 import React from 'react';
-
-
-
-
 export default function Banner({ type, title, backgroundImage }) {
     const bannerStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImage})`

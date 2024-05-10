@@ -1,0 +1,43 @@
+
+.collapse {
+    
+  }
+.collapse-toggle {
+    width: 100%;
+    background: #FF6060;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .collapse-icon {
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .open .collapse-icon {
+    transform: rotate(135deg);
+  }
+  
+  .collapse-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    padding: 0px 15px;
+  }
+  
+  .open .collapse-content {
+    max-height: 1000px; /* Réglez cette valeur sur une valeur suffisamment grande pour afficher tout le contenu */
+  }
+  
