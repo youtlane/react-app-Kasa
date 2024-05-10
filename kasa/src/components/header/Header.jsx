@@ -14,6 +14,15 @@ export default function Header() {
         <header className="header">
             <div className="header_logo">
                 <Link to="/">
+                    
+                </Link>
+                <Link to="/" 
+                    onClick={() => setCurrentRoute("/")}
+                    className={
+                        currentRoute==="/"
+                        ? "header_nav_link-home-active"
+                        : "header_nav_link-home"
+                    }>
                     <img className="logo" src={logo} alt="Logo" />
                 </Link>
             </div>
