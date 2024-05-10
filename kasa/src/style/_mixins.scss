@@ -4,12 +4,19 @@
         @content;
     }
 }
+/* Mixin pour le breakpoint tablet */
+@mixin tablet {
+    @media  (min-width: $tablet)   and (max-width: $desktop){
+        @content;
+    }
+}
+
+
 
 
 /* animate the top banner */
 @mixin card-animate {
     transition: 500ms ease-in-out;
-
     &:hover {
         opacity: 0.8;
         box-shadow: $shadow;
@@ -20,4 +27,8 @@
 @mixin mobileCard{
     width: 100%;
     height: 255px;
+}
+@mixin tabletCard{
+    width: 100%;
+    height: 290px;
 }

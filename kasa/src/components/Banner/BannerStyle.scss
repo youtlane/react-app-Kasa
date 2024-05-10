@@ -13,11 +13,17 @@
     text-shadow: $shadow;
     box-shadow: $shadow;
     @include mobile{
-        font-size: 18px;
+        font-size: 14px;
         margin: $marginM;
         padding:0 16px;
         height: 111px;
         font-weight: 700;
+    }
+    @include tablet{
+        margin: $marginT;
+        padding: 0 20px;
+        font-size: 22px;
+        height: 167px;
     }
     
 }

@@ -6,7 +6,9 @@
     @include mobile{
         margin: $marginM;
         gap: 15px;
-        /*flex-wrap: wrap;*/
+    }
+    @include tablet{
+        margin: $marginT;
     }
     &_logo .logo{
         height: 68px;
@@ -17,15 +19,6 @@
     &_nav{
         font-size: 24px;
         font-weight: 500;
-        border: 2px solid red;
-
-        /*&_link-home , &_link-home-active {
-            /* padding-left: 57px;*/
-           /* @include mobile{
-                padding-left: 0;  
-            }
-            
-        }*/
         &_link-home , &_link-about {
             text-decoration: none;
         }
@@ -33,9 +26,11 @@
             line-height: 142.6%; /* 34.224px */
             text-decoration-line: underline;
         }
-        @include mobile{
+        @include mobile {
             font-size: 12px;
-        
+        }
+        @include tablet{
+            font-size: 18px;
         }
     }
     .navbar{
