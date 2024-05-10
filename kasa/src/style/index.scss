@@ -26,6 +26,14 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include mobile{
+        margin: $marginM;
+        gap:20px;
+    }
+    @include tablet{
+        margin: $marginT;
+        gap: 25px;
+    }
 }
 .collapse-text{
     padding: 10px 0;

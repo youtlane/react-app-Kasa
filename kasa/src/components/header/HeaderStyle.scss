@@ -5,7 +5,7 @@
     justify-content: space-between;
     @include mobile{
         margin: $marginM;
-        gap: 15px;
+        justify-content: baseline;
     }
     @include tablet{
         margin: $marginT;
@@ -19,6 +19,7 @@
     &_nav{
         font-size: 24px;
         font-weight: 500;
+
         &_link-home , &_link-about {
             text-decoration: none;
         }
