@@ -14,27 +14,36 @@ export default function Header() {
         <header className="header">
             <div className="header_logo">
                 <Link to="/">
-                    
                     <img className="logo" src={logo} alt="Logo" />
                 </Link>
             </div>
-            <nav className="header_nav">    
-                <Link to="/" 
-                onClick={() => setCurrentRoute("/")}
-                className={
-                    currentRoute==="/"
-                    ? "header_nav_link-home-active"
-                    : "header_nav_link-home"
-                    }>
-                    Accueil</Link>
-                <Link to="/about"
-                onClick={() => setCurrentRoute("about")}
-                className={
-                    currentRoute==="about"
-                    ? "header_nav_link-home-active"
-                    : "header_nav_link-home"
-                    }>
-                A Propos</Link>
+            <nav className="header_nav"> 
+                <ul className="navbar">
+                    <li>
+                        <Link to="/" 
+                            onClick={() => setCurrentRoute("/")}
+                            className={
+                                currentRoute==="/"
+                                ? "header_nav_link-home-active"
+                                : "header_nav_link-home"
+                            }>
+                            Accueil
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about"
+                            onClick={() => setCurrentRoute("about")}
+                            className={
+                                currentRoute==="about"
+                                ? "header_nav_link-home-active"
+                                : "header_nav_link-home"
+                            }>
+                            A Propos
+                        </Link>
+                    </li>
+                </ul>
+                
+                
             </nav>
         </header>
     );

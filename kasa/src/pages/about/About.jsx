@@ -14,6 +14,21 @@ export default function Property() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
           </p>
         </Collapse>
+        <Collapse title="Respect">
+          <p className="collapse-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
+          </p>
+        </Collapse>
+        <Collapse title="Service">
+          <p className="collapse-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
+          </p>
+        </Collapse>
+        <Collapse title="Sécurité">
+          <p className="collapse-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
+          </p>
+        </Collapse>
       </div>
       
     </main>

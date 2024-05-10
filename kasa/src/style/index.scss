@@ -22,8 +22,11 @@
 }
 .Collapse-container {
     margin: 38px 100px;
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .collapse-text{
     padding: 10px 0;
+    line-height: 142.6%
 }

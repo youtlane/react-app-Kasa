@@ -5,6 +5,8 @@
     justify-content: space-between;
     @include mobile{
         margin: $marginM;
+        gap: 15px;
+        /*flex-wrap: wrap;*/
     }
     &_logo .logo{
         height: 68px;
@@ -15,14 +17,15 @@
     &_nav{
         font-size: 24px;
         font-weight: 500;
+        border: 2px solid red;
 
-        &_link-home , &_link-home-active {
-            padding-left: 57px;
-            @include mobile{
-                /* padding-left: 27px;*/
+        /*&_link-home , &_link-home-active {
+            /* padding-left: 57px;*/
+           /* @include mobile{
+                padding-left: 0;  
             }
             
-        }
+        }*/
         &_link-home , &_link-about {
             text-decoration: none;
         }
@@ -33,6 +36,15 @@
         @include mobile{
             font-size: 12px;
         
+        }
+    }
+    .navbar{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 75px;
+        @include mobile{
+            gap: 18px;
         }
     }
     
