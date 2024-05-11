@@ -13,9 +13,6 @@ export default function Header() {
     return (
         <header className="header">
             <div className="header_logo">
-                <Link to="/">
-                    
-                </Link>
                 <Link to="/" 
                     onClick={() => setCurrentRoute("/")}
                     className={

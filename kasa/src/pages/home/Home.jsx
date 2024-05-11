@@ -23,8 +23,6 @@ export default function Home() {
           <div className="cards">
             {properties.map(property => (
               <div className="card">
-
-              
               <Link key={property.id} to={`/property/${property.id}`}> {/* Utiliser Link pour créer un lien */}
                     <Card title={property.title} cover={property.cover} />
               </Link>
