@@ -11,7 +11,7 @@ export default function Error() {
     
       <Link to="/">
           Retourner sur la page d’accueil
-        </Link>
+      </Link>
       
     </main>
   );

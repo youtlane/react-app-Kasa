@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:9000'; // URL de base de votre serveur JSON
+const BASE_URL = 'http://localhost:9000'; // URL de base de notre serveur JSON
 
 
 // Fonction pour récupérer toutes les propriétés
