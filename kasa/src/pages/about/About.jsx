@@ -1,36 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import aboutBackgroundImage from '../../assets/aboutBackground.jpg';
 import Collapse from '../../components/Collapse/Collapse';
+import { getAboutPageData } from '../../service/api';
 
 
-export default function Property() {
+export default function About() {
+  const [aboutData, setAboutData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getAboutPageData();
+        setAboutData(data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données de la page About :', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <main>
       <Banner type="about" title="" backgroundImage={aboutBackgroundImage} />
       <div className="Collapse-container">
-        <Collapse title="Fiabilité">
-          <p className="collapse-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
-          </p>
-        </Collapse>
-        <Collapse title="Respect">
-          <p className="collapse-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
-          </p>
-        </Collapse>
-        <Collapse title="Service">
-          <p className="collapse-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
-          </p>
-        </Collapse>
-        <Collapse title="Sécurité">
-          <p className="collapse-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere, nisi vitae cursus ultricies, leo lorem eleifend magna, nec aliquam arcu justo ac lectus. Aliquam id odio et nisi cursus accumsan.
-          </p>
-        </Collapse>
+        {aboutData.map(item => (
+          <Collapse key={item.id} title={item.title}>
+            <p className="collapse-text">{item.content}</p>
+          </Collapse>
+        ))}
       </div>
-      
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import { getAllProperties } from '../../service/api';
-import Card from '../../components/cards/Cards';
+import Card from '../../components/Cards/Cards';
 import homeBackgroundImage from '../../assets/homeBackground.jpg';
 import { Link } from 'react-router-dom';
 
