@@ -49,3 +49,45 @@
     padding: 10px 0;
     line-height: 142.6%
 }
+.fiche-container{
+    margin: 38px 100px;
+    .fiche{
+        margin-top: 30px;
+        .fiche-content {
+            display: flex;
+            justify-content: space-between;
+            &_title h1 {
+                font-size: 36px;
+                font-weight: 500;
+                color: #FF6060;
+            }
+            &_title p{
+                font-size: 18px;
+            }
+            &_profile {
+                display: flex;
+                gap: 10px;
+                p {
+                    font-size: 18px;
+                    color: #FF6060;
+                    width: 93px;
+                    text-align: right;
+                    font-weight: 500;
+                    line-height: 142.6%
+                }
+                img{
+                    border-radius: 50%;
+                    height: 64px;
+                }
+            }
+        }
+        
+        .collapse-fiche-container {
+            width: 100%;
+            display: flex;
+            gap: 76px;
+        }
+    }   
+    
+
+}

@@ -27,7 +27,6 @@ export default function Home() {
                     <Card title={property.title} cover={property.cover} />
               </Link>
               </div>
-              
             ))}
           </div>
         </article>
