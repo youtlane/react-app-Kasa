@@ -4,6 +4,7 @@ import { getAllProperties } from '../../service/api';
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Tags from "../../components/Tags/Tags";
 import Collapse from '../../components/Collapse/Collapse';
+import Rating from '../../components/Rating/Rating';
 
 
 const Property = () => {
@@ -44,11 +45,8 @@ const Property = () => {
             <p>{property.host.name}</p>
             <img src={property.host.picture} alt={property.host.name} />
           </aside>
+          <Rating rating={property.rating} />
         </div>
-      
-          
-      
-
         <div className='collapse-fiche-container'>
           <Collapse  title="Description">
               <p className="collapse-text">{property.description}</p>
@@ -62,15 +60,6 @@ const Property = () => {
         </Collapse>
         </div>
       </section>
-      
-
-      
-      {/*<p>{property.host.name}</p>
-        
-        <p>Price: {property.price} €</p>
-        <p>Rating: {property.rating}</p>
-        <p>{property.description}</p>
-         Ajoutez d'autres informations pertinentes de la propriété ici */}
     </main>
   );
 };

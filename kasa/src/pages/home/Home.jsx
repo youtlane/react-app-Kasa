@@ -22,7 +22,7 @@ export default function Home() {
         <article className="cards-container">
           <div className="cards">
             {properties.map(property => (
-              <div className="card">
+              <div className="card" key={property.id}>
               <Link key={property.id} to={`/property/${property.id}`}>
                     <Card title={property.title} cover={property.cover} />
               </Link>
