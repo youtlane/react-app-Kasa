@@ -1,0 +1,14 @@
+.rate {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    margin-right: 5px;
+    height: 36px;
+    color: #ff6060;
+}
+
+.star.gray {
+    color: #f6f6f6; 
+}

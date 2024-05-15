@@ -40,12 +40,17 @@ const Property = () => {
             <h1>{property.title}</h1>
             <p>{property.location}</p>
             <Tags tags={property.tags} />
+            
           </div>
           <aside className='fiche-content_profile'>
-            <p>{property.host.name}</p>
-            <img src={property.host.picture} alt={property.host.name} />
+            <div className='profile-infos'>
+              <p>{property.host.name}</p>
+              <img src={property.host.picture} alt={property.host.name} />
+            </div>
+            
+            <Rating rating={property.rating} />
           </aside>
-          <Rating rating={property.rating} />
+          
         </div>
         <div className='collapse-fiche-container'>
           <Collapse  title="Description">

@@ -71,22 +71,27 @@
             }
             &_profile {
                 display: flex;
-                gap: 10px;
-                p {
-                    font-size: 18px;
-                    color: #FF6060;
-                    width: 93px;
-                    text-align: right;
-                    font-weight: 500;
-                    line-height: 142.6%
-                }
-                img{
-                    border-radius: 50%;
-                    height: 64px;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 20px;
+                .profile-infos {
+                    display: flex;
+                    gap: 10px;
+                    p {
+                        font-size: 18px;
+                        color: #FF6060;
+                        width: 93px;
+                        text-align: right;
+                        font-weight: 500;
+                        line-height: 142.6%
+                    }
+                    img{
+                        border-radius: 50%;
+                        height: 64px;
+                    }
                 }
             }
         }
-        
         .collapse-fiche-container {
             width: 100%;
             display: flex;
