@@ -53,9 +53,13 @@ const Property = () => {
           <Collapse  title="Description">
               <p className="collapse-text">{property.description}</p>
           </Collapse>
-          <Collapse  title="Équipements">
-              <p className="collapse-text">{property.equipments}</p>
-          </Collapse>
+          <Collapse title="Équipements">
+            <ul className='collapse-fiche-list'>
+              {property.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+        </Collapse>
         </div>
       </section>
       

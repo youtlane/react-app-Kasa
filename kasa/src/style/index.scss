@@ -47,12 +47,17 @@
 }
 .collapse-text{
     padding: 10px 0;
-    line-height: 142.6%
+    font-size: 18px;
+    line-height: 142.6%;
+    
 }
 .fiche-container{
     margin: 38px 100px;
     .fiche{
         margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         .fiche-content {
             display: flex;
             justify-content: space-between;
@@ -86,6 +91,14 @@
             width: 100%;
             display: flex;
             gap: 76px;
+            .collapse-fiche-list{
+                list-style: none;
+                padding: 20px 0;
+                li{
+                    font-size: 18px;
+                    line-height: 142.6%;
+                }
+            }
         }
     }   
     
