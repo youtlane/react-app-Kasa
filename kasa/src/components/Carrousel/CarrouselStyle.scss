@@ -18,6 +18,10 @@
     cursor: pointer;
     height: 79.2px;
     color: white;
+    @include mobile{
+      height: 24px;
+      
+    }
   }
   
   .slides {
@@ -41,6 +45,10 @@
     height: 415px;
     object-fit: cover;
     border-radius: 25px;
+    @include mobile{
+      height: 255px;  
+      border-radius: 10px;
+    }
   }
   
   .pagination {

@@ -47,10 +47,8 @@ const Property = () => {
               <p>{property.host.name}</p>
               <img src={property.host.picture} alt={property.host.name} />
             </div>
-            
             <Rating rating={property.rating} />
           </aside>
-          
         </div>
         <div className='collapse-fiche-container'>
           <Collapse  title="Description">

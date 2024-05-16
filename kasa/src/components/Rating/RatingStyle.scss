@@ -7,6 +7,9 @@
     margin-right: 5px;
     height: 36px;
     color: #ff6060;
+    @include mobile{
+        height: 18px;
+    }
 }
 
 .star.gray {
