@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import aboutBackgroundImage from '../../assets/aboutBackground.jpg';
 import Collapse from '../../components/Collapse/Collapse';
-import { getAboutPageData } from '../../service/api';
+import { getAboutPageData } from '../../service/Api';
 
 
 export default function About() {

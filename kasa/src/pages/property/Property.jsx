@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; 
-import { getAllProperties } from '../../service/api';
+import { getAllProperties } from '../../service/Api';
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Tags from "../../components/Tags/Tags";
 import Collapse from '../../components/Collapse/Collapse';
