@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'; 
+import { useParams, useNavigate } from 'react-router-dom'; 
 import { getAllProperties } from '../../service/Api';
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Tags from "../../components/Tags/Tags";
 import Collapse from '../../components/Collapse/Collapse';
 import Rating from '../../components/Rating/Rating';
 
-
 const Property = () => {
   const [property, setProperty] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,14 +18,19 @@ const Property = () => {
         const property = properties.find(property => property.id === id); 
         if (property) {
           setProperty(property);
+        } else {
+          // Rediriger vers la page 404 si la propriété n'est pas trouvée
+          navigate('*');
         }
       } catch (error) {
         console.error('Erreur lors de la récupération des propriétés :', error);
+        // Optionnel: Rediriger vers une page 404 en cas d'erreur de récupération
+        navigate('*');
       }
     };
 
     fetchData();
-  }, [id]);
+  }, [id, navigate]);
 
   if (!property) {
     return <p>Chargement...</p>; // Afficher un message de chargement pendant que les données sont récupérées
@@ -40,7 +45,6 @@ const Property = () => {
             <h1>{property.title}</h1>
             <p>{property.location}</p>
             <Tags tags={property.tags} />
-            
           </div>
           <aside className='fiche-content_profile'>
             <div className='profile-infos'>
@@ -51,8 +55,8 @@ const Property = () => {
           </aside>
         </div>
         <div className='collapse-fiche-container'>
-          <Collapse  title="Description">
-              <p className="collapse-text">{property.description}</p>
+          <Collapse title="Description">
+            <p className="collapse-text">{property.description}</p>
           </Collapse>
           <Collapse title="Équipements">
             <ul className='collapse-fiche-list'>
@@ -60,7 +64,7 @@ const Property = () => {
                 <li key={index}>{equipment}</li>
               ))}
             </ul>
-        </Collapse>
+          </Collapse>
         </div>
       </section>
     </main>

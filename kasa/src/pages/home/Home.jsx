@@ -10,7 +10,7 @@ export default function Home() {
   const [properties, setProperties] = useState([]);
   useEffect(() => {
       const fetchData = async () => {
-          const propertiesData = await getAllProperties();
+          const propertiesData = getAllProperties();
           setProperties(propertiesData);
       };
       fetchData();

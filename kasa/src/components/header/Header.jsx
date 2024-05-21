@@ -1,26 +1,29 @@
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.jpg';
 
+
+
 export default function Header() {
-    const[currentRoute, setCurrentRoute] = useState()
-    useEffect(()=>{
-        const path = window.location.pathname;
-        setCurrentRoute(path);
-    },[]);
-    
+    const location = useLocation();
+    const [currentRoute, setCurrentRoute] = useState(location.pathname);
+
+    useEffect(() => {
+        setCurrentRoute(location.pathname);
+    }, [location.pathname]);
+
     return (
         <header className="header">
             <div className="header_logo">
                 <Link to="/" 
                     onClick={() => setCurrentRoute("/")}
                     className={
-                        currentRoute==="/"
+                    currentRoute === "/" 
                         ? "header_nav_link-home-active"
                         : "header_nav_link-home"
                     }>
-                    <img className="logo" src={logo} alt="Logo" />
+                <img className="logo" src={logo} alt="Logo" />
                 </Link>
             </div>
             <nav className="header_nav"> 
@@ -29,7 +32,7 @@ export default function Header() {
                         <Link to="/" 
                             onClick={() => setCurrentRoute("/")}
                             className={
-                                currentRoute==="/"
+                            currentRoute === "/" 
                                 ? "header_nav_link-home-active"
                                 : "header_nav_link-home"
                             }>
@@ -38,9 +41,9 @@ export default function Header() {
                     </li>
                     <li>
                         <Link to="/about"
-                            onClick={() => setCurrentRoute("about")}
+                            onClick={() => setCurrentRoute("/about")}
                             className={
-                                currentRoute==="about"
+                            currentRoute === "/about"
                                 ? "header_nav_link-home-active"
                                 : "header_nav_link-home"
                             }>
@@ -48,8 +51,6 @@ export default function Header() {
                         </Link>
                     </li>
                 </ul>
-                
-                
             </nav>
         </header>
     );
